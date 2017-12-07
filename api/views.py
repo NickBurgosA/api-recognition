@@ -22,3 +22,7 @@ class ImageViewSet(viewsets.ModelViewSet):
         respuesta = reconocer_imagen(image)
 
         return Response({"respuesta": respuesta}, status= status.HTTP_200_OK)
+
+
+def home(request):
+    return render(request, 'index.html')
